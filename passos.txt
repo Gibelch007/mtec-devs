@@ -8,6 +8,7 @@ dotnet new mvc -o MtecDevs -f net6.0
 dotnet sln add MtecDevs\MtecDevs.csproj
 
 /instalação dos pacotes/
+
 dotnet add package Microsoft.EntityFrameworkCore --version 6.0.21
 
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.21
@@ -19,3 +20,8 @@ dotnet add package Microsoft.Extensions.Identity.Core --version 6.0.21
 /salvando no Github/
 Estar na pasta do repositório (cd ..)
 git add .
+
+/dados/
+
+Usuarios - Devs/Admin/Prof
+       Dados básicos: Nome, Data nascimento,
