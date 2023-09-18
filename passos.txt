@@ -24,4 +24,4 @@ git add .
 /dados/
 
 Usuarios - Devs/Admin/Prof
-       Dados básicos: Nome, Data nascimento,
+  
