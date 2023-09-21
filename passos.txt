@@ -15,7 +15,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.21
 
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
 
-dotnet add package Microsoft.Extensions.Identity.Core --version 6.0.21
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.21
 
 /salvando no Github/
 Estar na pasta do repositório (cd ..)
@@ -24,4 +24,7 @@ git add .
 /dados/
 
 Usuarios - Devs/Admin/Prof
+
+/criação da classe de Contexto na pasta Data/
+
   
