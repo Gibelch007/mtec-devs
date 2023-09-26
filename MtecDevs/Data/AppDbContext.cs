@@ -4,20 +4,19 @@ using MtecDevs.Models;
 
 namespace MtecDevs.Data;
 
-    public class AppDbContext : IdentityDbContext
-    {
-       public AppDbContext(DbContextOptions opcoes) : base(opcoes)
-       {
-       }
+public class AppDbContext : IdentityDbContext {
+    
+    // Opções de Conexão 
+    public AppDbContext(DbContextOptions opcoes) : base(opcoes) {}
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<TipoDev> TipoDevs { get; set; }
 
-       public DbSet<Usuario> Usuarios {get; set;}
-       public DbSet<TipoDev> TipoDevs {get; set;}
-
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
+    // Sobrescrita de um método principal
+    protected override void OnModelCreating(ModelBuilder builder) {
         base.OnModelCreating(builder);
     }
 
+}
 
 
-    }
+

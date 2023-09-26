@@ -27,4 +27,13 @@ Usuarios - Devs/Admin/Prof
 
 /criação da classe de Contexto na pasta Data/
 
-  
+  Criar a migração
+// Testar se tem ferramenta de migração
+dotnet ef
+
+//instala no PC
+dotnet tool install --global dotnet-ef
+
+// Comandos para criar e aplicar as migrações
+dotnet ef migrations add criar-banco
+dotnet ef database update
