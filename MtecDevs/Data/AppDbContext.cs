@@ -12,8 +12,10 @@ public class AppDbContext : IdentityDbContext {
     public DbSet<TipoDev> TipoDevs { get; set; }
 
     // Sobrescrita de um método principal
-    protected override void OnModelCreating(ModelBuilder builder) {
+    protected override void OnModelCreating(ModelBuilder builder) 
+    {
         base.OnModelCreating(builder);
+        AppDbSeed seed = new(builder);
     }
 
 }
