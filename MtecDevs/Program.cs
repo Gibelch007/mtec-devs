@@ -14,7 +14,6 @@ builder.Services.AddControllersWithViews();
 string conn = builder.Configuration.GetConnectionString("MtecDevs");
 var version = ServerVersion.AutoDetect(conn); // detectar a versão do banco de dados
 
-
 // Adicionar o serviço de conexão com o banco de dados - Entity
 builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseMySql(conn, version)
