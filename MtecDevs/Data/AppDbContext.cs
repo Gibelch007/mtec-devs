@@ -7,7 +7,7 @@ namespace MtecDevs.Data;
 public class AppDbContext : IdentityDbContext {
     
     // Opções de Conexão 
-    public AppDbContext(DbContextOptions opcoes) : base(opcoes) {}
+    public AppDbContext(DbContextOptions<AppDbContext> opcoes) : base(opcoes) {}
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<TipoDev> TipoDevs { get; set; }
 
