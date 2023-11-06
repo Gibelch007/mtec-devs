@@ -10,7 +10,7 @@
             <img src="~/img/logo2.png" alt="Logo" width="350">
         </div>
         <input type="hidden" asp-for="UrlRetorno">
-        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         
         <div class="mb-3">
             <label asp-for="Email" class="form-label"></label>
@@ -43,3 +43,7 @@
 
     </form>
 </main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
