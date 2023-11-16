@@ -59,6 +59,15 @@ public class AccountController : Controller
         return View(login);
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        _logger.LogInformation($"Usuário {ClaymTypes.Email} fes logoff");
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("Index", "Home");
+    }
+
 
     private static bool IsValidEmail(string email)
     {
