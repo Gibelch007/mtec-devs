@@ -1,5 +1,6 @@
 using System.Net.Mail;
 using System.Runtime.CompilerServices;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MtecDevs.ViewModels;
@@ -63,7 +64,7 @@ public class AccountController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Logout()
     {
-        _logger.LogInformation($"Usuário {ClaymTypes.Email} fes logoff");
+        _logger.LogInformation($"Usuário {ClaimTypes.Email} fes logoff");
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
